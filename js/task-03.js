@@ -20,7 +20,7 @@ console.log(" galleryList", galleryList)
 
 const makeImgItems = images => {
   const { url, alt } = images;
-  return `<li class='gallery-item'><img src='${url}' alt="${alt}"></img></li>`;
+  return `<li class='gallery-item'><img src='${url}' alt="${alt}" width=370></img></li>`;
 }
 const imgItemsMarkup=images.map(makeImgItems).join()
 

@@ -25,9 +25,12 @@ button {
 
 .gallery {
   display: flex;
-  
+  list-style: none;
 }
 
 .gallery-item {
-width: calc((100%-20px)/3;
+width: calc((100%-20px)/3);
+
 }
+
+
