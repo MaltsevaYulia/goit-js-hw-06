@@ -17,5 +17,5 @@ const elements = ingredients.map(ingredient => {
   console.log(elements);
 
 const ingredientsList = document.querySelector('#ingredients');
-console.log("🚀 ~ file: task-02.js:19 ~ ingredientsList", ingredientsList)
+console.log("ingredientsList", ingredientsList)
 ingredientsList.append(...elements);
