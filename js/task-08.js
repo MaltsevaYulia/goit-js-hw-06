@@ -5,7 +5,7 @@ formRef.addEventListener('submit', onFormSubmit)
 function onFormSubmit(event) {
     event.preventDefault();
     
-    const {
+    const  {
     elements: { email, password }
     } = event.currentTarget;
     
@@ -15,3 +15,5 @@ function onFormSubmit(event) {
   console.log(email.value, password.value);
   event.currentTarget.reset();
 }
+
+// 

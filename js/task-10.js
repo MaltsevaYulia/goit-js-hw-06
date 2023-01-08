@@ -8,38 +8,37 @@ const refs = {
   buttonDestroy: document.querySelector('[data-destroy]'),
   divBox: document.querySelector('#boxes')
 }
-// console.log(refs.input);
-// console.log(refs.buttonCreate);
-// console.log(refs.buttonDestroy);
-// console.log(refs.divBox);
 
 refs.input.addEventListener('input', onInputChange);
-
+refs.buttonCreate.addEventListener('click', createBoxes);
+refs.buttonDestroy.addEventListener('click', destroyBoxes);
 
 function onInputChange(event) {
-  // console.log(Number(event.currentTarget.value));;
-  const amount = Number(event.currentTarget.value);
-  
-  return amount
+  // // console.log(Number(refs.input.value));
+  // const amount = Number(event.currentTarget.value);
+  // return amount
 
 }
 
-
-refs.buttonCreate.addEventListener('click', createBoxes);
-
 function createBoxes(amount) {
+  
   const elements=[]
-  for (let i = 0; i < 4; i++) {
-    console.log(amount);
+  for (let i = 0; i < refs.input.value; i++) {
 
     let element = document.createElement('div');
     element.style.width=30+i*10+'px'
     element.style.height=30+i*10+'px'
     element.style.backgroundColor = getRandomHexColor()
-    console.log(element);
     elements.push(element)
     refs.divBox.append(...elements);
-    
   }
+}
+
+function destroyBoxes() {
+  const divBoxElements = document.querySelectorAll('#boxes div')
+
+  divBoxElements.forEach(element => {
+    element.remove()
+  });
   
 }
