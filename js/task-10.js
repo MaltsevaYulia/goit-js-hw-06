@@ -30,8 +30,8 @@ function createBoxes(amount) {
     element.style.height=30+i*10+'px'
     element.style.backgroundColor = getRandomHexColor()
     elements.push(element)
-    refs.divBox.append(...elements);
   }
+  refs.divBox.append(...elements);
 }
 
 function destroyBoxes() {
